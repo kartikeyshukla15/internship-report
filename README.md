@@ -1,10 +1,11 @@
+
 <a id="readme-top"></a>
 
 # 💼 Pocket - Linked Accounts Management – DMP 2026 Internship Progress Report
 
 ![Internship](https://img.shields.io/badge/Internship-Mifos%20Initiative-blueviolet?style=for-the-badge)
-![Duration](https://img.shields.io/badge/Duration-11%20Weeks-brightgreen?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge)
+![Duration](https://img.shields.io/badge/Duration-13%20Weeks-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 ![PRs Opened](https://img.shields.io/badge/PRs%20Opened-✔️%2011-informational?style=for-the-badge)
 ![Tech](https://img.shields.io/badge/Tech-Kotlin%20Multiplatform%20%7C%20Compose%20Multiplatform-orange?style=for-the-badge)
 
@@ -36,17 +37,18 @@ The feature is implemented using **Kotlin Multiplatform** and **Compose Multipla
 
 ## 🛠️ Tech Stack
 
-| **Category**              | **Technology / Framework**             | **Purpose** |
-|----------------------------|-----------------------------------------|-------------|
-| **Language**               | Kotlin (Multiplatform)                  | Shared business logic across Android, iOS, Desktop |
-| **UI Framework**           | Compose Multiplatform, Jetpack Compose  | Declarative UI for all platforms |
-| **Architecture**           | MVI (Model-View-Intent)                 | Unidirectional state management with clear separation of concerns |
-| **Networking**             | Ktor + Ktorfit                          | Type-safe HTTP client for the Pocket API |
-| **Asynchronous Handling**  | Kotlin Coroutines + Flows               | Structured concurrency and reactive streams |
-| **Local Persistence**      | Room (Multiplatform)                    | Offline fallback / caching for linked pocket accounts |
-| **Testing**                | Kotlin Test, Compose Multiplatform Testing | Unit tests for repositories, ViewModels, and screens |
-| **Backend**                | Apache Fineract – Pocket API            | Link/delink and retrieve linked pocket accounts |
-| **Project Management**     | Jira + GitHub                           | Issue tracking, sprint planning, progress tracking |
+| **Category** | **Technology / Framework** | **Purpose** |
+|---|---|---|
+| **Language** | Kotlin (Multiplatform) | Shared business logic across Android, iOS, Desktop |
+| **UI Framework** | Compose Multiplatform, Jetpack Compose | Declarative UI for all platforms |
+| **Architecture** | MVI (Model-View-Intent) | Unidirectional state management with clear separation of concerns |
+| **Networking** | Ktor + Ktorfit | Type-safe HTTP client for the Pocket API |
+| **Asynchronous Handling** | Kotlin Coroutines + Flows | Structured concurrency and reactive streams |
+| **Local Persistence** | Room (Multiplatform) | Offline fallback / caching for linked pocket accounts |
+| **Testing** | Kotlin Test, Compose Multiplatform Testing | Unit tests for repositories, ViewModels, and screens |
+| **Backend** | Apache Fineract – Pocket API | Link/delink and retrieve linked pocket accounts |
+| **Project Management** | Jira + GitHub | Issue tracking, sprint planning, progress tracking |
+
 ---
 
 <div align="right">
@@ -84,7 +86,7 @@ The feature is implemented using **Kotlin Multiplatform** and **Compose Multipla
 ## 📅 Weekly Progress
 
 | Week | Dates | Focus Area | Key Deliverables | PRs Opened |
-|------|--------|------------|-------------------|------------|
+|---|---|---|---|---|
 | [1](#week-1-10th-june--13th-june) | 10–13 Jun | Design | Pocket Dashboard & Manage Pocket mockups | 0 |
 | [2](#week-2-15th-june--20th-june) | 15–20 Jun | Data Layer (mifos-mobile) | Pocket Service/Repository, caching, balance aggregation | 1 |
 | [3](#week-3-22nd-june--27th-june) | 22–27 Jun | Dashboard UI (mifos-mobile) | Pocket Dashboard screen with grouped account sections | 1 |
@@ -96,6 +98,9 @@ The feature is implemented using **Kotlin Multiplatform** and **Compose Multipla
 | [9](#week-9-3rd-aug--8th-aug) | 3–8 Aug | Testing (mifos-pay) | Repository, ViewModel & screen tests | 1 |
 | [10](#week-10-10th-aug--15th-aug) | 10–15 Aug | Testing & Suggestions (mifos-mobile) | Repository/ViewModel/screen tests, pocket account suggestion | 2 |
 | [11](#week-11-17th-aug--22nd-aug) | 17–22 Aug | Store Integration (mifos-pay) | Adopted intelligent caching via store integration | 1 |
+| [12](#week-12-24th-aug--29th-aug) | 24–29 Aug | Integration & Documentation | Rebased feature PRs onto store integration; documented Pocket feature files | 2 |
+| [13](#week-13-7th-sep--12th-sep) | 7–12 Sep | Documentation & Roadmapping | Added feature READMEs/docs for both apps; prepared Mifos Field Officer roadmap | 2 |
+
 ---
 
 <div align="right">
@@ -256,7 +261,7 @@ The feature is implemented using **Kotlin Multiplatform** and **Compose Multipla
 
 - Implemented conflict resolution strategies for the Pocket Repository to avoid ambiguity between the offline fallback and the pocket APIs, in both mifos-pay and mifos-mobile.
 
-- Implemented the pocket account suggestion feature in mifos-pay — pocket accounts are suggested as a priority for any transaction, with a dialog prompting the user to add the selected account to their pocket if it isn't already linked.
+- Implemented the pocket account suggestion feature in mifos-pay — pocket accounts are suggested as a priority for any transaction, with a dialog prompting the user to add an account to their pocket if it isn't already linked.
 
 **Pull Requests**
 
@@ -325,6 +330,50 @@ The feature is implemented using **Kotlin Multiplatform** and **Compose Multipla
 
 </details>
 
+---
+
+<a id="week-12-24th-aug--29th-aug"></a>
+
+<details>
+<summary>📌 Week 12 (24th – 29th August)</summary>
+
+**Summary**
+
+- Rebased the Pocket feature test and account-suggestion pull requests onto the Pocket Store adoption pull request in mifos-pay.
+
+- Added documentation for the Pocket feature files in mifos-pay.
+
+**Pull Requests**
+
+- (mifos-pay) [#2063](https://github.com/openMF/mifos-pay/pull/2063) – feat: pocket feature tests
+
+- (mifos-pay) [#2060](https://github.com/openMF/mifos-pay/pull/2060) – feat: pocket account suggestion
+
+</details>
+
+---
+
+<a id="week-13-7th-sep--12th-sep"></a>
+
+<details>
+<summary>📌 Week 13 (7th – 12th September)</summary>
+
+**Summary**
+
+- Added `README.md` files for the Pocket feature module in both mifos-pay and mifos-mobile, and documented Pocket feature files in mifos-mobile.
+
+- Created a roadmap for the mifos-field-officer app covering new features and enhancements to existing functionality.
+
+**Pull Requests**
+
+- (mifos-pay) [#2067](https://github.com/openMF/mifos-pay/pull/2067) – feat: pocket documentation
+
+- (mifos-mobile) [#3155](https://github.com/openMF/mifos-mobile/pull/3155) – feat: pocket documentation
+
+</details>
+
+---
+
 <div align="right">
 
 [![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
@@ -356,9 +405,5 @@ The feature is implemented using **Kotlin Multiplatform** and **Compose Multipla
 </div>
 
 <p align="center">
-
-  <em>📌 This is a <strong>living blog</strong> – progress updates are continuously added.
-
-  Click on the ▸ arrow buttons above to view weekly details.</em>
-
+  <em>Click on the ▸ arrow buttons above to view the detailed weekly progress.</em>
 </p>
